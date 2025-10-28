@@ -1,4 +1,3 @@
-from game import apply_guess
 from hangman.game import render_display, is_won, is_lost
 
 
