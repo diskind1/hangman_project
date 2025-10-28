@@ -37,8 +37,7 @@ def apply_guess(state: dict, ch: str) -> bool:
         if secret_char == ch:
             state["display"][i] = ch
             return True
-        else:
-            state["wrong_guesses"] += 1
+    state["wrong_guesses"] += 1
     return False
 
 
@@ -52,7 +51,7 @@ def render_display(state: dict) -> str:
     return "".join(state["display"])
 
 def render_summary(state: dict) -> str:
-    return (f"המילה הסודית היא: {state["secret"]} \n"
-            f" אתה ניחשת: {','.join(state["guessed"])}")
+    return (f"המילה הסודית היא:       {state["secret"]} \n"
+            f" אתה ניחשת:       {','.join(state["guessed"])}")
 
 
